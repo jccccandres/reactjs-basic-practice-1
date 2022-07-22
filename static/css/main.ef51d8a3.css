@@ -1,0 +1,2 @@
+body,html{margin:0;padding:0}.main{align-items:center;height:100vh;justify-content:space-evenly}.card,.main{display:flex}.card{border:2px double #000;flex-direction:column;height:300px;justify-content:end;padding:10px;width:250px}.card .card-body{height:31%}.card .card-body .card-description span,.card .card-body .card-element span{font-weight:700}.card .card-body .card-description{-webkit-line-clamp:4;-webkit-box-orient:vertical;display:-webkit-box;max-width:100%;overflow:hidden}
+/*# sourceMappingURL=main.ef51d8a3.css.map*/
