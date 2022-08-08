@@ -13,7 +13,7 @@ html, body {
     align-items: center;
     font-size: 18px;
     top: 0;
-    background-color: #576574;
+    background-color: rgba(87, 101, 116, 1);
 
     a {
         color: rgba(255, 255, 255, 0.7);
@@ -36,30 +36,71 @@ html, body {
         margin: 0;
         height: 100%;
 
-        li {
+        > li {
             display: table;
             height: 100%;
             width: 150px;
+            position: relative;
 
-            a {
+            > a {
                 display: table-cell;
                 text-align: center;
                 vertical-align: middle;
+            }
+
+            &.parent-nav {
+                > a:after {
+                    padding-left: 4px;
+                    content: ' ▾';
+                }
+
+                &:hover {
+                    > .nav-dropdown {
+                        display: block;
+                    }
+                }
             }
 
             a:hover {
                 color: rgba(255, 255, 255, 1);
                 border: 1px solid rgba(255, 255, 255, 0.3);
             }
+
+            .nav-dropdown {
+                display: none;
+                position: absolute;
+                left: 0;
+                list-style-type: none;
+                padding: 0;
+                width: 250px;
+                margin-top: 70px;
+                background-color: rgba(87, 101, 116, 1);
+
+                li {
+                    display: table;
+                    width: 100%;
+                    height: 60px;
+
+                    a {
+                        display: table-cell;
+                        vertical-align: middle;
+                        padding: 10px;
+                    }
+                }
+            }
         }
     }
+}
+
+main {
+    padding-top: 70px;
 }
 
 .main {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     place-items: center;
-    height: 100vh;
+    height: calc(100vh - 70px);
 
     .card {
         display: grid;
