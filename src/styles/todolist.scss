@@ -1,0 +1,63 @@
+.main-todolist {
+    display: grid;
+    row-gap: 10px;
+    max-width: 500px;
+    margin: 50px auto;
+
+    .form-wrapper {
+        display: grid;
+        column-gap: 10px;
+        grid-template-columns: 1fr 80px;
+
+        input {
+            height: 25px;
+            font-size: 15px;
+            padding: 5px;
+        }
+    }
+
+    .table {
+        display: grid;
+
+        .table-header {
+            display: grid;
+            grid-template-columns: 8fr 4fr;
+            column-gap: 5px;
+            place-items: center;
+
+            padding: 5px;
+            border-bottom: 1px solid #686868;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        .table-body {
+            display: grid;
+
+            .table-row {
+                display: grid;
+                grid-template-columns: 8fr 4fr;
+                column-gap: 5px;
+                
+                padding: 5px;
+                border-bottom: 1px solid #686868;
+
+                .table-column:last-child {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                button {
+                    margin-left: 3px;
+                    margin-right: 3px;
+                }
+            }
+
+            .table-row.empty {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

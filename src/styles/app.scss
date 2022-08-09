@@ -2,18 +2,20 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    color: #c9d1d9;
+    background-color: #0d1117;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     position: fixed;
-    height: 70px;
+    height: 62px;
     width: 100%;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
     top: 0;
-    background-color: rgba(87, 101, 116, 1);
+    background-color: rgba(22, 27, 34, 1);
 
     a {
         color: rgba(255, 255, 255, 0.7);
@@ -22,7 +24,7 @@ html, body {
 
     .logo {
         padding: 0 30px;
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .logo:hover {
@@ -73,13 +75,13 @@ html, body {
                 list-style-type: none;
                 padding: 0;
                 width: 250px;
-                margin-top: 70px;
-                background-color: rgba(87, 101, 116, 1);
+                margin-top: 62px;
+                background-color: rgba(22, 27, 34, 1);
 
                 li {
                     display: table;
                     width: 100%;
-                    height: 60px;
+                    height: 50px;
 
                     a {
                         display: table-cell;
@@ -93,56 +95,47 @@ html, body {
 }
 
 main {
-    padding-top: 70px;
+    padding-top: 62px;
 }
 
-.main {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    place-items: center;
-    height: calc(100vh - 70px);
+footer {
+    display: flex;
+    max-width: 1280px;
+    height: 115px;
+    margin: 0 auto;
+    border-top: 1px solid grey;
 
-    .card {
-        display: grid;
-        grid-template-rows: 4fr 1fr 1fr;
-        height: 390px;
-        width: 250px;
-        border: 10px solid #f2d955;
-        background-color: #efefef;
-        padding: 5px;
+    ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        padding: 0 30px;
 
-        .card-image {
-            height: 250px;
+        li {
+            padding: 0 10px;
 
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
+            a {
+                text-decoration: none;
+                color: #58a6ff;
 
-        .card-header {
-            h3 {
-                margin: 5px 0;
-            }
-        }
-
-        .card-body {
-            .card-element {
-                span {
-                    font-weight: bold;
+                &:hover {
+                    text-decoration: underline;
                 }
             }
-            .card-description {
-                display: -webkit-box;
-                max-width: 100%;
-                -webkit-line-clamp: 5;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
 
-                span {
-                    font-weight: bold;
-                }
+            &:not(:first-child) {
+                border-left: 1px solid grey;
             }
         }
     }
 }
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    @import './home.scss';
+    @import './todolist.scss';
+}
+
+@import './cards.scss';

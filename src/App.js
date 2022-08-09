@@ -1,9 +1,6 @@
 import React from "react";
 import { Routes, Route, Link } from 'react-router-dom';
 
-/* styles */
-import "./styles/app.scss";
-
 /* components */
 import Todolist from "./components/Todolist";
 import Home from "./components/Home";
@@ -24,7 +21,7 @@ const App = () => {
                                 </ul>
                             </li>
                         </ul>
-                        <a href="https://jccccandres.github.io/" className="logo">ReactJS Practice</a>
+                        <a href="https://jccccandres.github.io/" className="logo">jc.git</a>
                     </nav>
                 </header>
                 <main>
@@ -36,7 +33,13 @@ const App = () => {
                 </main>
 
                 <footer>
-
+                    <ul className="main-footer">
+                        <li>2022, Jc Andres</li>
+                    </ul>
+                    <ul className="nav-footer">
+                        <li><Link to="reactjs-basic-practice-1/cards">Cards</Link></li>
+                        <li><Link to="reactjs-basic-practice-1/todolist">Todo List</Link></li>
+                    </ul>
                 </footer>
             </>
     );
