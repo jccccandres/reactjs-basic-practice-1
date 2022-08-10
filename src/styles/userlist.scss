@@ -1,0 +1,30 @@
+.main-userlist {
+    margin: 50px auto;
+
+    .users-info { 
+        list-style: none;
+        padding: 0;
+    }
+
+    .form-group {
+        display: grid;
+        row-gap: 10px;
+        max-width: 300px;
+
+        input {
+            height: 25px;
+            font-size: 15px;
+            padding: 5px;
+        }
+
+        .button-group {
+            display: grid;
+            column-gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr;
+            
+            button {
+                height: 40px;
+            }
+        }
+    }
+}
