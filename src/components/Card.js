@@ -12,14 +12,14 @@ const Card = ({name, url}) => {
             });
     }, [url]);
 
-        useEffect(() => {
-            if (pokemonInfo) {
-                axios.get(pokemonInfo.species.url)
-                .then(response => {
-                    setSpecieInfo(response.data)
-                });
-            }
-        }, [pokemonInfo]);
+    useEffect(() => {
+        if (pokemonInfo) {
+            axios.get(pokemonInfo.species.url)
+            .then(response => {
+                setSpecieInfo(response.data)
+            });
+        }
+    }, [pokemonInfo]);
     
     if (pokemonInfo) {
         const image_link = pokemonInfo.sprites.other['official-artwork'].front_default;

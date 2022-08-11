@@ -21,7 +21,7 @@ const Home = () => {
             <div className="container">
                 <h1>Cards Page</h1>
                 <p>
-                    Practice getting data from API using axios
+                    Practice getting data from API using axios. APIs from <a href='https://pokeapi.co/'>https://pokeapi.co/</a>
                 </p>
 
 

@@ -134,6 +134,10 @@ footer {
     max-width: 1280px;
     margin: 0 auto;
 
+    a {
+        color: grey;
+    }
+
     @import './home.scss';
     @import './todolist.scss';
     @import './userlist.scss';
