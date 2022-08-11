@@ -1,9 +1,10 @@
 .main {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 50px;
     place-items: center;
-    height: calc(100vh - 70px);
     color: #000;
+    margin: 50px 0;
 
     .card {
         display: grid;
