@@ -54,6 +54,8 @@ const Todolist = () => {
         fileReader.onload = e => {
             setState({...state, todolist: JSON.parse(e.target.result)})
         };
+        
+        e.target.value = '';
     }
 
     return (

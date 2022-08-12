@@ -1,2 +1,5 @@
 /* USERS */
 export const SET_USERS_INFO = 'SET_USER_INFO';
+
+/* BUDGET TRACKER */
+export const SET_BUDGET_TRACKER = 'SET_BUDGET_TRACKER';

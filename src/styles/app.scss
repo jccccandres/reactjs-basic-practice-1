@@ -144,9 +144,14 @@ footer {
         border-bottom: 1px solid grey;
     }
 
+    h2 a {
+        text-decoration: none;
+    }
+
     @import './home.scss';
     @import './todolist.scss';
     @import './userlist.scss';
+    @import './budget_tracker.scss';
 }
 
 @import './cards.scss';

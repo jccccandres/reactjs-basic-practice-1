@@ -1,0 +1,51 @@
+.main-wrapper {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid grey;
+
+    h2 {
+        margin-top: 10px;
+    }
+
+    .form-wrapper {
+        display: flex;
+        select {
+            font-size: 18px;
+            padding: 3px;
+            margin: 0 10px 10px 0;
+        }
+    }
+
+    .table {
+        display: grid;
+
+        .table-row {
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+
+            .table-column {
+                align-self: center;
+                height: 100%;
+                border: 1px solid grey;
+                padding: 0 10px;
+            }
+        }
+
+        &.table-income, &.table-expense, &.table-savings {
+            .table-row {
+                grid-template-columns: 1fr 4fr 1fr;
+                .table-column.action-column {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 5px;
+
+                    button {
+                        font-size: 15px;
+                        height: 25px;
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
+}
