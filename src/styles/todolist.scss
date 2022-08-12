@@ -4,6 +4,25 @@
     max-width: 500px;
     margin: 50px auto;
 
+    .import-form-wrapper {
+        display: grid;
+        row-gap: 5px;
+        border-bottom: 1px solid grey;
+        padding-bottom: 10px;
+        input {
+            font-size: 18px;
+        }
+    }
+
+    .export-form-wrapper {
+        display: grid;
+        padding-top: 10px;
+
+        button {
+            font-size: 18px;
+        }
+    }
+
     .form-wrapper {
         display: grid;
         column-gap: 10px;

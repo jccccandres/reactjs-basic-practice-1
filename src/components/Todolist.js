@@ -38,6 +38,24 @@ const Todolist = () => {
         setState({...state, todolist: list, indexToEdit: '', valueToEdit: ''});
     }
 
+    const exportData = () => {
+        const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
+            JSON.stringify(todolist)
+        )}`;
+        const link = document.createElement("a");
+        link.href = jsonString;
+        link.download = "data.json";
+        link.click();
+    }
+
+    const importData = (e) => {
+        const fileReader = new FileReader();
+        fileReader.readAsText(e.target.files[0], "UTF-8");
+        fileReader.onload = e => {
+            setState({...state, todolist: JSON.parse(e.target.result)})
+        };
+    }
+
     return (
         <>
             <div className="container">
@@ -47,6 +65,11 @@ const Todolist = () => {
                 </p>
                 
                 <div className="main-todolist">
+                    <div className="import-form-wrapper">
+                        <div>Import JSON file</div>
+                        <input type='file' onChange={importData} />
+                    </div>
+
                     <div className="form-wrapper">
                         <input 
                             type='text'
@@ -92,6 +115,14 @@ const Todolist = () => {
                                 onChange={handleOnChange} />
                             <button onClick={updateTodoList}>Save</button>
                         </div>
+                        : ''
+                    }
+                    
+                    {
+                        todolist.length ?
+                            <div className="export-form-wrapper">
+                                <button onClick={exportData}>Export</button>
+                            </div>
                         : ''
                     }
                     

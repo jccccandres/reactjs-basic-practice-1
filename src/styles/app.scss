@@ -138,6 +138,12 @@ footer {
         color: grey;
     }
 
+    .blog-wrapper {
+        margin: 0 100px 50px;
+        padding: 20px 0;
+        border-bottom: 1px solid grey;
+    }
+
     @import './home.scss';
     @import './todolist.scss';
     @import './userlist.scss';
