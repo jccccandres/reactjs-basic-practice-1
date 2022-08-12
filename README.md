@@ -13,3 +13,7 @@ npm install react-router-dom
 ```
 npm install redux react-redux redux-thunk redux-logger
 ```
+
+```
+npm install axios
+```
